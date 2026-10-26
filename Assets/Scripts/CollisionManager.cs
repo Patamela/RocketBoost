@@ -29,10 +29,10 @@ public class CollisionManager : MonoBehaviour
                 Debug.Log("LaunchPad Collision Detected");
                 break;
             case "LandingPad":
-                ManageCollision(landingAudioClip);
+                ManageCollision(landingAudioClip, landingParticleSystem);
                 break;
             case "Explosion":
-                ManageCollision(explosionAudioClip);
+                ManageCollision(explosionAudioClip, explosionParticleSystem);
                 break;
             default:
                 break;
@@ -46,11 +46,13 @@ public class CollisionManager : MonoBehaviour
     /// and disabling the layer movement.
     /// </summary>
     /// <param name="audioClip"></param>
-    private void ManageCollision(AudioClip audioClip)
+    /// <param name="particleSystem"></param>
+    private void ManageCollision(AudioClip audioClip, ParticleSystem particleSystem)
     {
         isControllable = false;
         audioSource.Stop();
         audioSource.PlayOneShot(landingAudioClip);
+        particleSystem.Play();
         GetComponent<PlayerMovement>().enabled = false;
     }
 }
