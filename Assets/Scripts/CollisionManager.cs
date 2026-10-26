@@ -29,10 +29,10 @@ public class CollisionManager : MonoBehaviour
                 Debug.Log("LaunchPad Collision Detected");
                 break;
             case "LandingPad":
-                ManageCollision(landingAudioClip, landingParticleSystem);
+                ManageCollision(explosionAudioClip, landingParticleSystem);
                 break;
             case "Explosion":
-                ManageCollision(explosionAudioClip, explosionParticleSystem);
+                ManageCollision(landingAudioClip, explosionParticleSystem);
                 break;
             default:
                 break;
