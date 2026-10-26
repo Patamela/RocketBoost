@@ -2417,6 +2417,66 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+--- !u!1001 &131683167
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: a41951dc5dfb26c4d9f2e74b27bb583c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -26.653076
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a41951dc5dfb26c4d9f2e74b27bb583c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.4031671
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a41951dc5dfb26c4d9f2e74b27bb583c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 16.13
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a41951dc5dfb26c4d9f2e74b27bb583c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a41951dc5dfb26c4d9f2e74b27bb583c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a41951dc5dfb26c4d9f2e74b27bb583c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a41951dc5dfb26c4d9f2e74b27bb583c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a41951dc5dfb26c4d9f2e74b27bb583c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a41951dc5dfb26c4d9f2e74b27bb583c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a41951dc5dfb26c4d9f2e74b27bb583c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a41951dc5dfb26c4d9f2e74b27bb583c, type: 3}
+      propertyPath: m_Name
+      value: Dropship_01_Tank_Red
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a41951dc5dfb26c4d9f2e74b27bb583c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 571194548}
+  m_SourcePrefab: {fileID: 100100000, guid: a41951dc5dfb26c4d9f2e74b27bb583c, type: 3}
 --- !u!1 &323355170
 GameObject:
   m_ObjectHideFlags: 0
@@ -3150,6 +3210,24 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_RenderingLayers: 1
   m_ShadowRenderingLayers: 1
+--- !u!1 &571194547 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: a41951dc5dfb26c4d9f2e74b27bb583c, type: 3}
+  m_PrefabInstance: {fileID: 131683167}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &571194548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 571194547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97ffa0db109355d4a9de324e13b90475, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RotatingObstacle
+  duration: 2
 --- !u!1001 &801805301
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3275,7 +3353,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2d2baf9e37e36e045abf18859d4bb082, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.07
+      value: 2.62
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2d2baf9e37e36e045abf18859d4bb082, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3324,6 +3402,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 2d2baf9e37e36e045abf18859d4bb082, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2100360824}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 2d2baf9e37e36e045abf18859d4bb082, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2100360825}
   m_SourcePrefab: {fileID: 100100000, guid: 2d2baf9e37e36e045abf18859d4bb082, type: 3}
 --- !u!1 &955003273
 GameObject:
@@ -12837,6 +12918,21 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 8490150674736346385, guid: 2d2baf9e37e36e045abf18859d4bb082, type: 3}
+--- !u!114 &2100360825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2100360820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b929b311ad088364784701726f1004d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MovingObstacle
+  movement: {x: 0, y: 5, z: 0}
+  duration: 2
+  delay: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -12850,3 +12946,4 @@ SceneRoots:
   - {fileID: 1380990752}
   - {fileID: 1278749541}
   - {fileID: 845690433}
+  - {fileID: 131683167}
