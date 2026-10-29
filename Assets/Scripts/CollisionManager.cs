@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CollisionManager : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class CollisionManager : MonoBehaviour
 
     AudioSource audioSource;
 
+    float delay = 1f;
     bool isControllable = true;
 
     void Start()
@@ -30,6 +32,7 @@ public class CollisionManager : MonoBehaviour
                 break;
             case "LandingPad":
                 ManageCollision(explosionAudioClip, landingParticleSystem);
+                Invoke(nameof(LoadLevel), delay);
                 break;
             case "Explosion":
                 ManageCollision(landingAudioClip, explosionParticleSystem);
@@ -54,5 +57,10 @@ public class CollisionManager : MonoBehaviour
         audioSource.PlayOneShot(landingAudioClip);
         particleSystem.Play();
         GetComponent<PlayerMovement>().enabled = false;
+    }
+
+    private void LoadLevel()
+    {
+        SceneManager.LoadScene("Level1");
     }
 }
