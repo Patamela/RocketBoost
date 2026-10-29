@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("Input Actions")]
     [SerializeField] private InputAction thrust;
     [SerializeField] private InputAction rotation;
+    [SerializeField] private InputAction shoot;
 
     [Header("Movement Settings")]
     [SerializeField] private float moveForce = 10f;
@@ -24,26 +25,36 @@ public class PlayerMovement : MonoBehaviour
 
     Rigidbody rb;
     AudioSource audioSource;
+    PlayerShooting playerShooting;
 
     void OnEnable()
     {
         thrust.Enable();
         rotation.Enable();
+        shoot.Enable();
     }
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         audioSource = GetComponent<AudioSource>();
+        playerShooting = GetComponent<PlayerShooting>();
     }
 
     void FixedUpdate()
     {
         ProcessThrust();
         ProcessRotation();
+        ProcessShooting();
     }
+
+    private void ProcessShooting()
+    {
+        if (shoot.IsPressed()) playerShooting.Shoot();
     
-   private void ProcessThrust()
+    }
+
+    private void ProcessThrust()
     {
         if (thrust.IsPressed())
         {
