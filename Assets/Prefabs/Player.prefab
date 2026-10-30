@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8725277618369360739}
   - component: {fileID: 6370640353122158502}
   - component: {fileID: 3247010562896614734}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Success Particle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2309,7 +2309,7 @@ GameObject:
   - component: {fileID: 4634564569124793033}
   - component: {fileID: 4219204789211374821}
   - component: {fileID: 952034012780524462}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: RightRocketJetParticles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4607,7 +4607,7 @@ GameObject:
   - component: {fileID: 5153188763916276925}
   - component: {fileID: 6398474930866544977}
   - component: {fileID: 6323002945193427355}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Explosion Particles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6903,7 +6903,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6082965171553065581}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ShoontPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6940,7 +6940,8 @@ GameObject:
   - component: {fileID: 7939257783765138618}
   - component: {fileID: 6595888066377938753}
   - component: {fileID: 2631185763081874306}
-  m_Layer: 0
+  - component: {fileID: 1762254805598912393}
+  m_Layer: 3
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -7296,6 +7297,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ObjectPool
   objectPrefab: {fileID: 3883645739472728899, guid: d50e5e8f352704f409aa8857dd82c00b, type: 3}
   poolSize: 10
+--- !u!114 &1762254805598912393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5153706902399014900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82351b50a7b16524f832558895dcac3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerHealth
+  maxHealth: 3
 --- !u!1 &5852716585969279222
 GameObject:
   m_ObjectHideFlags: 0
@@ -7307,7 +7321,7 @@ GameObject:
   - component: {fileID: 6139378259473980413}
   - component: {fileID: 5811333180483662222}
   - component: {fileID: 2902933071398572280}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: LeftRocketJetParticles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9605,7 +9619,7 @@ GameObject:
   - component: {fileID: 1433685480034442552}
   - component: {fileID: 7392971334947263893}
   - component: {fileID: 6213497133772598810}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: RocketJetParticles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11900,6 +11914,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3934804556392516319}
     m_Modifications:
+    - target: {fileID: 735248159299848828, guid: cf91000b018c5e64d87fba48f5ab81b9, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1224659374839088941, guid: cf91000b018c5e64d87fba48f5ab81b9, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1870015564088725238, guid: cf91000b018c5e64d87fba48f5ab81b9, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4920149203859127331, guid: cf91000b018c5e64d87fba48f5ab81b9, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5640209269674649616, guid: cf91000b018c5e64d87fba48f5ab81b9, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6377417671358724030, guid: cf91000b018c5e64d87fba48f5ab81b9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -11940,9 +11974,33 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6498824529509925112, guid: cf91000b018c5e64d87fba48f5ab81b9, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6777554938771796160, guid: cf91000b018c5e64d87fba48f5ab81b9, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7312640585713494312, guid: cf91000b018c5e64d87fba48f5ab81b9, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8600637378423474695, guid: cf91000b018c5e64d87fba48f5ab81b9, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8893038399265398046, guid: cf91000b018c5e64d87fba48f5ab81b9, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8902305362784705133, guid: cf91000b018c5e64d87fba48f5ab81b9, type: 3}
       propertyPath: m_Name
       value: Space Robot
+      objectReference: {fileID: 0}
+    - target: {fileID: 8902305362784705133, guid: cf91000b018c5e64d87fba48f5ab81b9, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

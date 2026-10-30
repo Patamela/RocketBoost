@@ -12,6 +12,9 @@ public class CollisionManager : MonoBehaviour
     [SerializeField] private ParticleSystem landingParticleSystem;
 
     AudioSource audioSource;
+    PlayerHealth playerHealth;
+    PlayerShooting playerShooting;
+    PowerUpScriptableObject powerUp;
 
     float delay = 1f;
     bool isControllable = true;
@@ -19,6 +22,8 @@ public class CollisionManager : MonoBehaviour
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
+        playerHealth = GetComponent<PlayerHealth>();
+        playerShooting = GetComponent<PlayerShooting>();
     }
 
     void OnCollisionEnter(Collision collision)
@@ -42,6 +47,12 @@ public class CollisionManager : MonoBehaviour
         }
     }
 
+    void OnTriggerEnter(Collider other)
+    {
+        if(!other.CompareTag("Explosion")) return;
+        playerHealth.LoseHealth();
+    }
+
     /// <summary>
     /// Manages the collsion event by disabling palyer control,
     /// stopping any ongoing audio, playing the specified adio clip,
@@ -52,15 +63,26 @@ public class CollisionManager : MonoBehaviour
     /// <param name="particleSystem"></param>
     private void ManageCollision(AudioClip audioClip, ParticleSystem particleSystem)
     {
-        isControllable = false;
         audioSource.Stop();
         audioSource.PlayOneShot(landingAudioClip);
         particleSystem.Play();
-        GetComponent<PlayerMovement>().enabled = false;
     }
 
     private void LoadLevel()
     {
         SceneManager.LoadScene("Level1");
     }
+
+    public void ApplyPowerUp(PowerUpScriptableObject powerUpData)
+    {
+        if(powerUpData.PowerUpType == "Ammo")
+        {
+            playerShooting.RecoverAmmo();
+        }
+        else if(powerUpData.PowerUpType == "Health")
+        {
+           playerHealth.RecoverHealth(); 
+        }
+    }
+
 }

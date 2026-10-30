@@ -7,11 +7,14 @@ TagManager:
   - LandingPad
   - LaunchPad
   - Explosion
+  - Explosive
+  - Enemy
+  - PowerUp
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
   - 

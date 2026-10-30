@@ -6,6 +6,10 @@ public class BulletController : MonoBehaviour
     [Header("Bullet Settings")]
     [SerializeField] private float bulletLifeTime = 1f;
 
+    EnemyHealth enemyHealth;
+    ExplosiveObject explosiveObject;
+    PlayerHealth playerHealth;
+
     void OnEnable()
     {   
         // Start the bullet lifetime countdown
@@ -24,6 +28,21 @@ public class BulletController : MonoBehaviour
     {
         //Deactivate the bullet when it coolides with another object
         Deactivate();
+        switch (other.tag)
+        {
+            case "Enemy":
+                enemyHealth = other.GetComponent<EnemyHealth>();
+                enemyHealth.LoseHealth();
+                break;
+            case "Explosive":
+                explosiveObject = other.GetComponent<ExplosiveObject>();
+                if(explosiveObject != null) explosiveObject.Detonate();
+                break;
+            case "Player":
+                playerHealth = other.GetComponent<PlayerHealth>();
+                playerHealth.LoseHealth();
+                break;
+        }
 
         //TODO: Particles
         //TODO: if bullet hits an enemy, reduce enemy health

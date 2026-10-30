@@ -57,4 +57,9 @@ public class PlayerShooting : MonoBehaviour
 
         }
     }
+
+    public void RecoverAmmo()
+    {
+        currentAmmo = maxAmmo;
+    }
 }
